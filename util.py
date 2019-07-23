@@ -16,9 +16,7 @@ def show_frame(frame, bbox_list=None, text=None,
     save_flag=False, save_name=None, wait_flag=False):
 
     # A list of colors to indicate the order of bounding boxes drawn.
-    color_list = [[255, 0, 0], [0, 255, 0], [0, 0, 255], [255, 255, 0],
-        [255, 0, 255], [0, 255, 255]]
-    color_list = color_list + [255, 255, 255]*20
+    color_list = [[0, 0, 255 - 255/len(bbox_list) * i] for i in range(0, len(bbox_list))]
 
     # Convert the frame to a BGR image if the input is grayscale.
     if len(frame.shape) == 2:
