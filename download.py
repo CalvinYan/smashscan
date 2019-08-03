@@ -12,8 +12,8 @@ def download_video(video_id, save_name, save_dir):
         os.remove(output_file_path)
 
     ydl_opts = {
-        'format': 'bestvideo[ext=mp4][height=720]\
-            [protocol!=http_dash_segments]/best[ext=mp4][height=720]\
+        'format': 'bestvideo[ext=mp4][height=360]\
+            [protocol!=http_dash_segments]/best[ext=mp4][height=360]\
             [protocol!=http_dash_segments]',
         'outtmpl': output_file_path
     }
